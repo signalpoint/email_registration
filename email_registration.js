@@ -4,6 +4,7 @@
 function email_registration_form_alter(form, form_state, form_id) {
   try {
     if (form_id == 'user_login_form') {
+      form.elements['name'].type = 'email';
       form.elements['name'].title = 'E-mail';
     }
     else if (form_id == 'user_register_form') {
